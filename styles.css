@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #abc5ff;
+    background-image: url('432.jpg')
+}
+
+header {
+    background-color: rgba(10, 24, 100, 0.889);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    width: auto;
+    border-bottom: 4px solid #000;
+    border-top: 4px solid #000;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #fffdf1;
+    }
+    50% {
+        text-shadow: 0 0 20px #2c03fa;
+    }
+    100% {
+        text-shadow: 0 0 10px #eeecf3;
+    }
+}
+
+header h1 {
+    font-size: 46px;
+    margin: 0;
+    color: #f8f8f8;
+    display: inline-block;
+    position: relative;
+    animation: neon 3.5s infinite;
+}
+
+
+  
+
+
+
+nav {
+    background-color: #2a2538;
+    text-align: center;
+    padding: 10px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta-button {
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #0074cc;
+  border-radius: 5px;
+  text-align: center;
+  width: auto;
+  background: linear-gradient(to right, #0074cc, #00bcd4); /* Blue to Cyan gradient */
+  background-size: 200% 100%; /* Larger size for the animation effect */
+  transition: background 0.3s ease-in-out; /* Add transition for smooth effect */
+  animation: gradientAnimation 2s infinite; /* Animation for gradient effect */
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 100% 0;
+  }
+  100% {
+      background-position: -100% 0;
+  }
+}
+
+.cta-button:hover {
+  background: #00bcd4; /* Hover state color (cyan) */
+  animation: none; /* Disable the animation on hover */
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+    }
+
+    .cta-button {
+        margin: 10px;
+    }
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 30px;
+    background: #0b2447;
+    border-radius: 10px;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    animation: form-animation 0.5s ease-in-out;
+  }
+  
+  @keyframes form-animation {
+    from {
+      transform: rotateX(-30deg);
+      opacity: 0;
+    }
+  
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .input {
+    width: calc(100% - 10px);
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #3b8df2;
+    background-color: transparent;
+    color: #fff;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .input::placeholder {
+    color: #fff;
+  }
+  
+  .input:hover,
+  .input:focus {
+    border-color: #3b8df2;
+    background-color: transparent;
+    transform: scale(1.05) rotateY(20deg);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+  }
+  
+  button {
+    width: calc(100% - 10px);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0077be;
+    font-size: 17px;
+    transform: scale(1.05) rotateY(20deg) rotateX(10deg);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .input-container select {
+    width: calc(100% - 10px);
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #3b8df2;
+    background-color: transparent;
+    color: #fff;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .input-container select:hover,
+  .input-container select:focus {
+    border-color: #3b8df2;
+    background-color: #1a406b; /* Change the background color to improve visibility */
+    transform: scale(1.05) rotateY(20deg);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+  }
+  .content {
+    border: 2px solid #0074cc; /* Blue color for the border */
+    padding: 20px; /* Add some padding for spacing */
+    margin: 20px 0; /* Add margin for spacing between sections */
+}
+
+h2 {
+    color: #1e58ed; /* Match the blue color for the heading */
+}
